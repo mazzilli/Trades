@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Trades.Domain/.vs
+/Trades.Domain/Trades.App/obj
+/Trades.Domain/Trades.Domain/bin/Debug/net7.0
+/Trades.Domain/Trades.Domain/obj
