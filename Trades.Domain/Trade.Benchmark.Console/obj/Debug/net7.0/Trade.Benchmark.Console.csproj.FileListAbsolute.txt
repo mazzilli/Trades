@@ -1,0 +1,5 @@
+C:\Users\willi\source\repos\Trades\Trades.Domain\Trade.Benchmark.Console\obj\Debug\net7.0\Trade.Benchmark.Console.csproj.AssemblyReference.cache
+C:\Users\willi\source\repos\Trades\Trades.Domain\Trade.Benchmark.Console\obj\Debug\net7.0\Trade.Benchmark.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\source\repos\Trades\Trades.Domain\Trade.Benchmark.Console\obj\Debug\net7.0\Trade.Benchmark.Console.AssemblyInfoInputs.cache
+C:\Users\willi\source\repos\Trades\Trades.Domain\Trade.Benchmark.Console\obj\Debug\net7.0\Trade.Benchmark.Console.AssemblyInfo.cs
+C:\Users\willi\source\repos\Trades\Trades.Domain\Trade.Benchmark.Console\obj\Debug\net7.0\Trade.Benchmark.Console.csproj.CoreCompileInputs.cache

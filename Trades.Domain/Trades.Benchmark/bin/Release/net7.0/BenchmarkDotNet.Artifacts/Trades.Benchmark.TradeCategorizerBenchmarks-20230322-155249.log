@@ -1,0 +1,278 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8
+// command took 1,31s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8
+// command took 16,38s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8
+// command took 2,71s and exited with 0
+// ***** Done, took 00:00:20 (20.48 sec)   *****
+// Found 4 benchmarks:
+//   TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=1000000]
+//   TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=10000000]
+//   TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=100000000]
+//   TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=1000000000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=1000000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet c95803a1-04ce-4865-bf35-250b85cb2fb8.dll --anonymousPipes 1704 1700 --benchmarkName "Trades.Benchmark.TradeCategorizerBenchmarks.Categorize(QtdTrades: 1000000)" --job Default --benchmarkId 0 in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.4 (7.0.423.11508), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 196400.00 ns, 196.4000 us/op
+WorkloadJitting  1: 1 op, 65126600.00 ns, 65.1266 ms/op
+
+WorkloadPilot    1: 2 op, 124235600.00 ns, 62.1178 ms/op
+WorkloadPilot    2: 3 op, 207439400.00 ns, 69.1465 ms/op
+WorkloadPilot    3: 4 op, 131030900.00 ns, 32.7577 ms/op
+WorkloadPilot    4: 5 op, 163980000.00 ns, 32.7960 ms/op
+WorkloadPilot    5: 6 op, 196655300.00 ns, 32.7759 ms/op
+WorkloadPilot    6: 7 op, 230332300.00 ns, 32.9046 ms/op
+WorkloadPilot    7: 8 op, 260398400.00 ns, 32.5498 ms/op
+WorkloadPilot    8: 9 op, 282251200.00 ns, 31.3612 ms/op
+WorkloadPilot    9: 10 op, 314603100.00 ns, 31.4603 ms/op
+WorkloadPilot   10: 11 op, 344145700.00 ns, 31.2860 ms/op
+WorkloadPilot   11: 12 op, 376098300.00 ns, 31.3415 ms/op
+WorkloadPilot   12: 13 op, 406456800.00 ns, 31.2659 ms/op
+WorkloadPilot   13: 14 op, 438627400.00 ns, 31.3305 ms/op
+WorkloadPilot   14: 15 op, 481796500.00 ns, 32.1198 ms/op
+WorkloadPilot   15: 16 op, 501277600.00 ns, 31.3299 ms/op
+
+WorkloadWarmup   1: 16 op, 503455800.00 ns, 31.4660 ms/op
+WorkloadWarmup   2: 16 op, 503261600.00 ns, 31.4538 ms/op
+WorkloadWarmup   3: 16 op, 504137400.00 ns, 31.5086 ms/op
+WorkloadWarmup   4: 16 op, 502598500.00 ns, 31.4124 ms/op
+WorkloadWarmup   5: 16 op, 519811200.00 ns, 32.4882 ms/op
+WorkloadWarmup   6: 16 op, 517469600.00 ns, 32.3419 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 16 op, 519024300.00 ns, 32.4390 ms/op
+WorkloadActual   2: 16 op, 509878300.00 ns, 31.8674 ms/op
+WorkloadActual   3: 16 op, 509173000.00 ns, 31.8233 ms/op
+WorkloadActual   4: 16 op, 517428000.00 ns, 32.3392 ms/op
+WorkloadActual   5: 16 op, 496830400.00 ns, 31.0519 ms/op
+WorkloadActual   6: 16 op, 513500700.00 ns, 32.0938 ms/op
+WorkloadActual   7: 16 op, 503959300.00 ns, 31.4975 ms/op
+WorkloadActual   8: 16 op, 516102600.00 ns, 32.2564 ms/op
+WorkloadActual   9: 16 op, 493122700.00 ns, 30.8202 ms/op
+WorkloadActual  10: 16 op, 503547200.00 ns, 31.4717 ms/op
+WorkloadActual  11: 16 op, 502500400.00 ns, 31.4063 ms/op
+WorkloadActual  12: 16 op, 502366900.00 ns, 31.3979 ms/op
+WorkloadActual  13: 16 op, 503289100.00 ns, 31.4556 ms/op
+WorkloadActual  14: 16 op, 502120500.00 ns, 31.3825 ms/op
+WorkloadActual  15: 16 op, 503041800.00 ns, 31.4401 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 16 op, 519024300.00 ns, 32.4390 ms/op
+WorkloadResult   2: 16 op, 509878300.00 ns, 31.8674 ms/op
+WorkloadResult   3: 16 op, 509173000.00 ns, 31.8233 ms/op
+WorkloadResult   4: 16 op, 517428000.00 ns, 32.3392 ms/op
+WorkloadResult   5: 16 op, 496830400.00 ns, 31.0519 ms/op
+WorkloadResult   6: 16 op, 513500700.00 ns, 32.0938 ms/op
+WorkloadResult   7: 16 op, 503959300.00 ns, 31.4975 ms/op
+WorkloadResult   8: 16 op, 516102600.00 ns, 32.2564 ms/op
+WorkloadResult   9: 16 op, 493122700.00 ns, 30.8202 ms/op
+WorkloadResult  10: 16 op, 503547200.00 ns, 31.4717 ms/op
+WorkloadResult  11: 16 op, 502500400.00 ns, 31.4063 ms/op
+WorkloadResult  12: 16 op, 502366900.00 ns, 31.3979 ms/op
+WorkloadResult  13: 16 op, 503289100.00 ns, 31.4556 ms/op
+WorkloadResult  14: 16 op, 502120500.00 ns, 31.3825 ms/op
+WorkloadResult  15: 16 op, 503041800.00 ns, 31.4401 ms/op
+// GC:  306 0 0 640002776 16
+// Threading:  0 0 16
+
+// AfterAll
+// Benchmark Process 21096 has exited with code 0.
+
+Mean = 31.650 ms, StdErr = 0.122 ms (0.38%), N = 15, StdDev = 0.472 ms
+Min = 30.820 ms, Q1 = 31.402 ms, Median = 31.472 ms, Q3 = 31.981 ms, Max = 32.439 ms
+IQR = 0.578 ms, LowerFence = 30.534 ms, UpperFence = 32.848 ms
+ConfidenceInterval = [31.145 ms; 32.154 ms] (CI 99.9%), Margin = 0.504 ms (1.59% of Mean)
+Skewness = 0.18, Kurtosis = 1.9, MValue = 2
+
+// ** Remained 3 (75,0%) benchmark(s) to run. Estimated finish 2023-03-22 15:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=10000000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet c95803a1-04ce-4865-bf35-250b85cb2fb8.dll --anonymousPipes 1720 1680 --benchmarkName "Trades.Benchmark.TradeCategorizerBenchmarks.Categorize(QtdTrades: 10000000)" --job Default --benchmarkId 1 in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.4 (7.0.423.11508), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 177800.00 ns, 177.8000 us/op
+WorkloadJitting  1: 1 op, 433695900.00 ns, 433.6959 ms/op
+
+OverheadJitting  2: 1 op, 1000.00 ns, 1.0000 us/op
+WorkloadJitting  2: 1 op, 317720900.00 ns, 317.7209 ms/op
+
+WorkloadPilot    1: 2 op, 637694200.00 ns, 318.8471 ms/op
+
+WorkloadWarmup   1: 2 op, 635924500.00 ns, 317.9622 ms/op
+WorkloadWarmup   2: 2 op, 638013900.00 ns, 319.0070 ms/op
+WorkloadWarmup   3: 2 op, 635732200.00 ns, 317.8661 ms/op
+WorkloadWarmup   4: 2 op, 644000700.00 ns, 322.0004 ms/op
+WorkloadWarmup   5: 2 op, 636457100.00 ns, 318.2285 ms/op
+WorkloadWarmup   6: 2 op, 633393000.00 ns, 316.6965 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 637216300.00 ns, 318.6082 ms/op
+WorkloadActual   2: 2 op, 637975000.00 ns, 318.9875 ms/op
+WorkloadActual   3: 2 op, 637840200.00 ns, 318.9201 ms/op
+WorkloadActual   4: 2 op, 637586800.00 ns, 318.7934 ms/op
+WorkloadActual   5: 2 op, 639423000.00 ns, 319.7115 ms/op
+WorkloadActual   6: 2 op, 641008500.00 ns, 320.5043 ms/op
+WorkloadActual   7: 2 op, 664620900.00 ns, 332.3105 ms/op
+WorkloadActual   8: 2 op, 627678900.00 ns, 313.8394 ms/op
+WorkloadActual   9: 2 op, 612931100.00 ns, 306.4656 ms/op
+WorkloadActual  10: 2 op, 611946900.00 ns, 305.9735 ms/op
+WorkloadActual  11: 2 op, 615421300.00 ns, 307.7106 ms/op
+WorkloadActual  12: 2 op, 610658600.00 ns, 305.3293 ms/op
+WorkloadActual  13: 2 op, 620888800.00 ns, 310.4444 ms/op
+WorkloadActual  14: 2 op, 611943000.00 ns, 305.9715 ms/op
+WorkloadActual  15: 2 op, 611688000.00 ns, 305.8440 ms/op
+WorkloadActual  16: 2 op, 611786800.00 ns, 305.8934 ms/op
+WorkloadActual  17: 2 op, 610909300.00 ns, 305.4547 ms/op
+WorkloadActual  18: 2 op, 613548600.00 ns, 306.7743 ms/op
+WorkloadActual  19: 2 op, 612030600.00 ns, 306.0153 ms/op
+WorkloadActual  20: 2 op, 612159600.00 ns, 306.0798 ms/op
+WorkloadActual  21: 2 op, 616889400.00 ns, 308.4447 ms/op
+WorkloadActual  22: 2 op, 640042000.00 ns, 320.0210 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 637216300.00 ns, 318.6082 ms/op
+WorkloadResult   2: 2 op, 637975000.00 ns, 318.9875 ms/op
+WorkloadResult   3: 2 op, 637840200.00 ns, 318.9201 ms/op
+WorkloadResult   4: 2 op, 637586800.00 ns, 318.7934 ms/op
+WorkloadResult   5: 2 op, 639423000.00 ns, 319.7115 ms/op
+WorkloadResult   6: 2 op, 641008500.00 ns, 320.5043 ms/op
+WorkloadResult   7: 2 op, 664620900.00 ns, 332.3105 ms/op
+WorkloadResult   8: 2 op, 627678900.00 ns, 313.8394 ms/op
+WorkloadResult   9: 2 op, 612931100.00 ns, 306.4656 ms/op
+WorkloadResult  10: 2 op, 611946900.00 ns, 305.9735 ms/op
+WorkloadResult  11: 2 op, 615421300.00 ns, 307.7106 ms/op
+WorkloadResult  12: 2 op, 610658600.00 ns, 305.3293 ms/op
+WorkloadResult  13: 2 op, 620888800.00 ns, 310.4444 ms/op
+WorkloadResult  14: 2 op, 611943000.00 ns, 305.9715 ms/op
+WorkloadResult  15: 2 op, 611688000.00 ns, 305.8440 ms/op
+WorkloadResult  16: 2 op, 611786800.00 ns, 305.8934 ms/op
+WorkloadResult  17: 2 op, 610909300.00 ns, 305.4547 ms/op
+WorkloadResult  18: 2 op, 613548600.00 ns, 306.7743 ms/op
+WorkloadResult  19: 2 op, 612030600.00 ns, 306.0153 ms/op
+WorkloadResult  20: 2 op, 612159600.00 ns, 306.0798 ms/op
+WorkloadResult  21: 2 op, 616889400.00 ns, 308.4447 ms/op
+WorkloadResult  22: 2 op, 640042000.00 ns, 320.0210 ms/op
+// GC:  382 0 0 800000872 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 6420 has exited with code 0.
+
+Mean = 312.186 ms, StdErr = 1.608 ms (0.52%), N = 22, StdDev = 7.544 ms
+Min = 305.329 ms, Q1 = 305.984 ms, Median = 308.078 ms, Q3 = 318.888 ms, Max = 332.310 ms
+IQR = 12.905 ms, LowerFence = 286.627 ms, UpperFence = 338.245 ms
+ConfidenceInterval = [306.043 ms; 318.329 ms] (CI 99.9%), Margin = 6.143 ms (1.97% of Mean)
+Skewness = 0.87, Kurtosis = 2.8, MValue = 2.15
+
+// ** Remained 2 (50,0%) benchmark(s) to run. Estimated finish 2023-03-22 15:55 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=100000000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet c95803a1-04ce-4865-bf35-250b85cb2fb8.dll --anonymousPipes 592 1568 --benchmarkName "Trades.Benchmark.TradeCategorizerBenchmarks.Categorize(QtdTrades: 100000000)" --job Default --benchmarkId 2 in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.4 (7.0.423.11508), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 216300.00 ns, 216.3000 us/op
+WorkloadJitting  1: 1 op, 3476977600.00 ns, 3.4770 s/op
+
+OverheadJitting  2: 1 op, 700.00 ns, 700.0000 ns/op
+WorkloadJitting  2: 1 op, 3336062800.00 ns, 3.3361 s/op
+
+WorkloadWarmup   1: 1 op, 3335803000.00 ns, 3.3358 s/op
+WorkloadWarmup   2: 1 op, 3339523200.00 ns, 3.3395 s/op
+WorkloadWarmup   3: 1 op, 3322996300.00 ns, 3.3230 s/op
+WorkloadWarmup   4: 1 op, 3335694500.00 ns, 3.3357 s/op
+WorkloadWarmup   5: 1 op, 3321780900.00 ns, 3.3218 s/op
+WorkloadWarmup   6: 1 op, 3324876300.00 ns, 3.3249 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 3326640300.00 ns, 3.3266 s/op
+WorkloadActual   2: 1 op, 3329367800.00 ns, 3.3294 s/op
+WorkloadActual   3: 1 op, 3336801400.00 ns, 3.3368 s/op
+WorkloadActual   4: 1 op, 3373979800.00 ns, 3.3740 s/op
+WorkloadActual   5: 1 op, 3394829900.00 ns, 3.3948 s/op
+WorkloadActual   6: 1 op, 3391504200.00 ns, 3.3915 s/op
+WorkloadActual   7: 1 op, 3490064900.00 ns, 3.4901 s/op
+WorkloadActual   8: 1 op, 3414471400.00 ns, 3.4145 s/op
+WorkloadActual   9: 1 op, 3405205400.00 ns, 3.4052 s/op
+WorkloadActual  10: 1 op, 3395930400.00 ns, 3.3959 s/op
+WorkloadActual  11: 1 op, 3392464300.00 ns, 3.3925 s/op
+WorkloadActual  12: 1 op, 3393320300.00 ns, 3.3933 s/op
+WorkloadActual  13: 1 op, 3391359600.00 ns, 3.3914 s/op
+WorkloadActual  14: 1 op, 3404129500.00 ns, 3.4041 s/op
+WorkloadActual  15: 1 op, 3390722300.00 ns, 3.3907 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 3326640300.00 ns, 3.3266 s/op
+WorkloadResult   2: 1 op, 3329367800.00 ns, 3.3294 s/op
+WorkloadResult   3: 1 op, 3336801400.00 ns, 3.3368 s/op
+WorkloadResult   4: 1 op, 3373979800.00 ns, 3.3740 s/op
+WorkloadResult   5: 1 op, 3394829900.00 ns, 3.3948 s/op
+WorkloadResult   6: 1 op, 3391504200.00 ns, 3.3915 s/op
+WorkloadResult   7: 1 op, 3414471400.00 ns, 3.4145 s/op
+WorkloadResult   8: 1 op, 3405205400.00 ns, 3.4052 s/op
+WorkloadResult   9: 1 op, 3395930400.00 ns, 3.3959 s/op
+WorkloadResult  10: 1 op, 3392464300.00 ns, 3.3925 s/op
+WorkloadResult  11: 1 op, 3393320300.00 ns, 3.3933 s/op
+WorkloadResult  12: 1 op, 3391359600.00 ns, 3.3914 s/op
+WorkloadResult  13: 1 op, 3404129500.00 ns, 3.4041 s/op
+WorkloadResult  14: 1 op, 3390722300.00 ns, 3.3907 s/op
+// GC:  1912 0 0 4000000736 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 24900 has exited with code 0.
+
+Mean = 3.381 s, StdErr = 0.008 s (0.23%), N = 14, StdDev = 0.029 s
+Min = 3.327 s, Q1 = 3.378 s, Median = 3.392 s, Q3 = 3.396 s, Max = 3.414 s
+IQR = 0.017 s, LowerFence = 3.352 s, UpperFence = 3.422 s
+ConfidenceInterval = [3.349 s; 3.414 s] (CI 99.9%), Margin = 0.033 s (0.96% of Mean)
+Skewness = -0.96, Kurtosis = 2.28, MValue = 2
+
+// ** Remained 1 (25,0%) benchmark(s) to run. Estimated finish 2023-03-22 16:01 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: TradeCategorizerBenchmarks.Categorize: DefaultJob [QtdTrades=1000000000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet c95803a1-04ce-4865-bf35-250b85cb2fb8.dll --anonymousPipes 1492 1252 --benchmarkName "Trades.Benchmark.TradeCategorizerBenchmarks.Categorize(QtdTrades: 1000000000)" --job Default --benchmarkId 3 in C:\Users\willi\source\repos\Trades\Trades.Domain\Trades.Benchmark\bin\Release\net7.0\c95803a1-04ce-4865-bf35-250b85cb2fb8\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.4 (7.0.423.11508), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+

@@ -2,42 +2,46 @@
 
 namespace Trades.App
 {
-    public class CategorizeTrades
+    public class TradeCategorizer : ITradeCategorizer
     {
-        const int _valueClassification = 1000000;
-        readonly string[] _classifications = { "LOWRISK", "MEDIUMRISK", "HIGHRISK" };
+        private readonly decimal _valueClassification;
+        private readonly string[] _classifications;
 
-        public List<string> Categorize(List<ITrade> portfolio)
+        /// <summary>
+        /// Categorize the trade by analyzing the value and the customer sector
+        /// </summary>
+        /// <param name="valueClassification">Risk reference value</param>
+        /// <param name="classifications">Low-risk, medium-risk, or high-risk classifications, in that order</param>
+        public TradeCategorizer(decimal valueClassification, string[] classifications)
         {
-            // Trade´s return with same size array
-            var tradeCategories = new string[portfolio.Count];
-
-            // run through the portfolio to classificate
-            Parallel.For(0, portfolio.Count, async (i) =>
-            {
-                // apply the rules
-                tradeCategories[i] = await Classificate(portfolio[i]);
-            });
-
-            return tradeCategories.ToList();
+            _valueClassification = valueClassification;
+            _classifications = classifications;
         }
 
         /// <summary>
-        /// Classificate the trade
+        /// Categorizes past values
         /// </summary>
-        /// <param name="trade"></param>
-        /// <returns>The risk of the trade("LOWRISK", "MEDIUMRISK", "HIGHRISK")</returns>
-        private async Task<string> Classificate(ITrade trade)
+        /// <param name="portfolio">list of trades</param>
+        /// <returns>trade risk</returns>
+        public IEnumerable<string> Categorize(List<ITrade> portfolio)
         {
-            return await Task.Run(() =>
+            return portfolio.Select(trade => Classify(trade));
+        }
+
+        /// <summary>
+        /// classifies the operation risk
+        /// </summary>
+        /// <param name="trade">Trade</param>
+        /// <returns>Classification</returns>
+        private string Classify(ITrade trade)
+        {
+            return trade.ClientSector switch
             {
-                return trade.ClientSector switch
-                {
-                    "Private" => trade.Value > _valueClassification ? _classifications[2] : string.Empty,
-                    "Public" => trade.Value > _valueClassification ? _classifications[0] : _classifications[1],
-                    _ => string.Empty,
-                };
-            });
+                Sector.Private => trade.Value > _valueClassification ? _classifications[2] : string.Empty,
+                Sector.Public => trade.Value > _valueClassification ? _classifications[0] : _classifications[1],
+                _ => string.Empty,
+            };
+
         }
     }
 }

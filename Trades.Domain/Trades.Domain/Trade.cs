@@ -2,8 +2,19 @@
 {
     public class Trade : ITrade
     {
-        public double Value { get; set; }
+        public Trade()
+        {
+            
+        }
+        public Trade(decimal value, Sector clientSector)
+        {
+            Value = value;
+            ClientSector = clientSector;
+        }
 
-        public string? ClientSector { get; set; }
+        public decimal Value { get; set; }
+
+        public Sector ClientSector { get; set; }
+
     }
 }
