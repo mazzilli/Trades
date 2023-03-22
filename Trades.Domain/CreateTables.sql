@@ -1,0 +1,7 @@
+﻿CREATE TABLE Trades (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Value DECIMAL(18,2) NOT NULL,
+    ClientSector VARCHAR(10) NOT NULL
+);
+
+
